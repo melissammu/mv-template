@@ -1,11 +1,9 @@
 import { ENVY_CONFIG } from "../data/config";
-import {sites} from "../data/sites";
 import"./sitePages.css";
 import { FaYoutube, FaPinterest, FaEnvelope, FaInstagram, FaWhatsapp, FaTiktok }
 from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 export default function SitePage() {
-  const data = sites.demo;
   const {profile, buttons} = ENVY_CONFIG;
   const navigate = useNavigate();
   return (
