@@ -2,7 +2,59 @@ import React from "react";
 import "../pages/productCatalogPage.css";
 
 export default function ProductCatalog({ products = [] }) {
-  if (!products.length) {
+  return (
+    <div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "40px",
+          marginTop: "40px",
+        }}
+      >
+        <img
+          src="/produtos/vitrine.jpeg"
+          alt="Minha Vitrine"
+          style={{
+            width: "300px",
+            borderRadius: "20px",
+            boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
+          }}
+        />
+
+        <a
+          href="https://vt.tiktok.com/ZS9JGTNpdAURN-Bvpxx/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            padding: "15px 25px",
+            backgroundColor: "#f8a0bc",
+            color: "#fefefe",
+            fontWeight: "bold",
+            borderRadius: "30px",
+            textDecoration: "none",
+            fontSize: "16px",
+            boxShadow: "0 8px 20px rgba(0,0,0,0.3)",
+            transition: "0.3s",
+          }}
+        >
+          Confira a vitrine da Melissa — Me espera no TikTok!
+        </a>
+      </div>
+
+      {products.length === 0 ? (
+        <p style={{ opacity: 0.8, textAlign: "center", marginTop: "20px" }}>
+          Aún no hay productos para mostrar.
+        </p>
+      ) : (
+        <div>
+          {/* aquí va tu render de productos (map) */}
+        </div>
+      )}
+    </div>
+  );
+}{
     return <p style={{ opacity: 0.8 }}>Aún no hay productos para mostrar.</p>;
   }
 
@@ -27,7 +79,7 @@ export default function ProductCatalog({ products = [] }) {
     />
 
     <a
-      href="Confira a vitrine de melissa._.M quedate aqui no TikTok! https://vt.tiktok.com/ZS9JGTWpdAURW-BvpwX/"
+      href="https://vt.tiktok.com/ZS9JGTWpdAURW-BvpwX/"
       target="_blank"
       rel="noopener noreferrer"
       style={{
@@ -52,4 +104,4 @@ export default function ProductCatalog({ products = [] }) {
     </a>
   </div>
 );
-} 
+ 
