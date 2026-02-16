@@ -12,7 +12,7 @@ export const ENVY_CONFIG = {
     {
       label: "Productos",
       type: "internal",
-      route: "/produtos",
+      route: "/productos",
     },
     {
       label: "Galería",
@@ -25,17 +25,18 @@ export const ENVY_CONFIG = {
     { type: "youtube", url: "https://youtube.com" },
     { type: "pinterest", url: "https://pinterest.com" },
     { type: "instagram", url: "https://instagram.com/@melissa.ti_" },
-    { type: "tiktok", url: "https://tiktok.com/melissa._.m2/https://www.tiktok.com/@melissa._.m2/video/7582033038364790023?is_from_webapp=1&sender_device=pc&web_id=7596833600109872658" },
+    { type: "tiktok", url: "https://tiktok.com/melissa._.m2"},
+     { type: "whatsapp", url:"https://wa.me/5541988694242?text=Hola%20quiero%20información%20sobre%20sus%20productos"},
   ],
 
   products: [
     {
       id: "p1",
-      title: "Shampoo + Conditioner",
-      price: 50,
+      title: "Conjunto de pijama sexy",
+      price: 33.35,
       currency: "R$",
-      image: "/produtos/prod1.jpg",
-      buyUrl: "https://www.amazon.com.br/",
+      image: "/produtos/public/produtos/Conjunto-de-pijama-sexy.jpg",
+      buyUrl: "https://a.co/d/0imTBbaG",
       store: "amazon",
     },
     {
@@ -47,7 +48,7 @@ export const ENVY_CONFIG = {
       buyUrl: "https://www.mercadolivre.com.br/",
       store: "mercadolivre",
     },
-    
+
   ],
   
 };

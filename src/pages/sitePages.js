@@ -1,95 +1,69 @@
 import { ENVY_CONFIG } from "../data/config";
-import"./sitePages.css";
-import { FaYoutube, FaPinterest, FaEnvelope, FaInstagram, FaWhatsapp, FaTiktok }
-from "react-icons/fa6";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import "./sitePages.css";
+
+import {
+  FaYoutube,
+  FaPinterest,
+  FaEnvelope,
+  FaInstagram,
+  FaWhatsapp,
+  FaTiktok,
+} from "react-icons/fa6";
+
+import { sites } from "../data/sites";
+
 export default function SitePage() {
-  const {profile, buttons} = ENVY_CONFIG;
-  const navigate = useNavigate();
+  const { profile, buttons, social } = ENVY_CONFIG; // si no usas profile/buttons por ahora, está bien
+  const site = sites.demo;
+
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "flex-start",
-        padding: 26,
-        fontFamily: "Arial",
-        background: "#f6f6f6",
-      }}
-    >
-      <div
-        style={{
-          width: "100%",
-          maxWidth: 420,
-          textAlign: "center",
-          background: "#ffeef2",
-          borderRadius: 18,
-          padding: 26,
-          boxShadow: "0 10px 30px rgba(0,0,0,0.12)",
-        }}
-      >
-       <img
-  src={profile.avatar}
-  alt={profile.name}
-  style={{
-    width: 120,
-    height: 120,
-    borderRadius: "50%",
-    objectFit: "cover",
-    marginBottom: 14,
-    border: "4px solid white",
-  }}
-/>
-        <div style={{ display: "flex", justifyContent: "center", gap: 16, marginBottom: 20 }}>
-  <a href="https://youtube.com" target="_blank" rel="noreferrer">
-    <FaYoutube size={28} />
-  </a>
+ <div className="site-container">
+  <div className="site-card">
+    <img src={profile.avatar} alt="avatar" className="site-avatar" />
 
-  <a href="https://pinterest.com" target="_blank" rel="noreferrer">
-    <FaPinterest size={28} />
-  </a>
+   <div className="social-icons">
+  {social?.map((item, index) => {
+    let Icon = FaEnvelope;
 
-  <a href="mailto:tuemail@gmail.com">
-    <FaEnvelope size={28} />
-  </a>
+    if (item.type === "instagram") Icon = FaInstagram;
+    if (item.type === "tiktok") Icon = FaTiktok;
+    if (item.type === "youtube") Icon = FaYoutube;
+    if (item.type === "pinterest") Icon = FaPinterest;
+    if (item.type === "whatsapp") Icon = FaWhatsapp;
 
-  <a href="https://instagram.com" target="_blank" rel="noreferrer">
-    <FaInstagram size={28} />
-  </a>
-
-  <a href="https://wa.me/5599999999999" target="_blank" rel="noreferrer">
-    <FaWhatsapp size={28} />
-  </a>
-  <a href="https://www.tiktok.com/@tucuenta" target="_blank" rel="noreferrer">
-    <FaTiktok size={28} />
-  </a>
+    return (
+     <a key={index} href={item.url} target="_blank" rel="noreferrer">
+        <Icon />
+      </a>
+    );
+  })}
 </div>
-        <h1>{profile.name}</h1>
-        <p>{profile.tagline}</p>
-        
- {buttons.map((btn) =>
-  btn.type === "internal" ? (
-    <button
-  key={btn.label}
-  onClick={() => navigate(btn.route)}
-  className="site-button"
->
-  {btn.label}
-</button>
-  ) : (
-    <a
-  key={btn.label}
-  href={btn.url}
-  target="_blank"
-  rel="noreferrer"
-  className="site-button"
->
-  {btn.label}
-</a>
-  )
-)}
-</div>
-</div>
-  );
-   }
+   {/* Nombre + Bio */}
+      <h1 className="site-name">{profile.name}</h1>
+      <p className="site-bio">{profile.tagline}</p>
+
+      {/* BOTONES */}
+      <div className="buttons">
+        {buttons?.map((btn, index) =>
+          btn.type === "internal" ? (
+            <Link key={index} to={btn.route} className="site-button">
+              {btn.label}
+            </Link>
+          ) : (
+            <a
+              key={index}
+              href={btn.url}
+              target="_blank"
+              rel="noreferrer"
+              className="site-button"
+            >
+              {btn.label}
+            </a>
+          )
+        )}
+      </div>
+    </div>
+  </div>
+);
+ }

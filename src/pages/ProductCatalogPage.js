@@ -8,8 +8,8 @@ export default function ProductCatalogPage() {
       <div className="catalogCard">
         <div className="catalogHeader">
           <div>
-            <h1 className="catalogTitle">Catálogo de Productos</h1>
-            <p className="catalogSub">Elige tu producto y compra en segundos.</p>
+            <h1 className="catalogTitle">Catálogo de Produtos</h1>
+            <p className="catalogSub">Escolha seu produtos e compre em segundos.</p>
           </div>
         </div>
 

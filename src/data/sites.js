@@ -3,8 +3,7 @@ export const sites = {
     name: "Mv",
     tagline: "Todos lo que necesitas lo encuentras en un sólo lugar.",
     links: [
-      { label: "Instagram", url: "https://instagram.com/@melissa.ti_" },
-      { label: "Mis videos", url: "https://wa.me/000000000" },
+      { label: "Vitrine", url: "Confira a vitrine de melissa._.M quedate aqui no TikTok! https://vt.tiktok.com/ZS9JtvQgDLRbG-544Ck/" },
     ],
   },
 };
