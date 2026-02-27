@@ -1,5 +1,5 @@
 import ProductCatalog from "../components/ProductCatalog";
-import { PRODUCTS } from "../data/products.";
+import { PRODUCTS } from "../data/products";
 import "./productCatalogPage.css";
 
 export default function ProductCatalogPage() {
