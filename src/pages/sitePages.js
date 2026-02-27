@@ -15,7 +15,6 @@ import { sites } from "../data/sites";
 
 export default function SitePage() {
   const { profile, buttons, social } = ENVY_CONFIG; // si no usas profile/buttons por ahora, está bien
-  const site = sites.demo;
 
   return (
  <div className="site-container">
