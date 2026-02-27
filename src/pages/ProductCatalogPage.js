@@ -1,5 +1,5 @@
 import ProductCatalog from "../components/ProductCatalog";
-import { PRODUCTS } from "../data/products";
+import { PRODUCTS } from "../data/products,js";
 import "./productCatalogPage.css";
 
 export default function ProductCatalogPage() {
@@ -12,21 +12,23 @@ export default function ProductCatalogPage() {
             <p className="catalogSub">Escolha seu produtos e compre em segundos.</p>
           </div>
         </div>
+      <ProductCatalog products={PRODUCTS} />
 
-        <ProductCatalog products={PRODUCTS} />
-        <div style={{ 
-  display: "flex",
-  justifyContent: "center",
-  marginTop: "20px",
-  marginBottom: "30px"
-}}>
+<div
+  style={{
+    display: "flex",
+    justifyContent: "center",
+    marginTop: "20px",
+    marginBottom: "30px"
+  }}
+>
   <a
-    href="https://vt.tiktok.com/ZS9JWp9hJhJ9T-rQKj6/"
+    href="https://vt.tiktok.com/ZS9egfJnuCWW7-4veHy/"
     target="_blank"
     rel="noopener noreferrer"
     style={{
       padding: "15px 25px",
-      backgroundColor: "#eb8cbb",
+      backgroundColor: "#eb6cbb",
       color: "#ffffff",
       fontWeight: "bold",
       borderRadius: "30px",

@@ -1,7 +1,7 @@
 export const PRODUCTS = [
   {
-
-      image: "/produtos/vitrine.jpg",
-      Url: "https://vt.tiktok.com/ZS9JtvQgDLRbG-544Ck/",
-    },
+    name: "Vitrine TikTokShop",
+    image: "/productos/vitrine.jpg",
+    url: "https://vt.tiktok.com/ZS9egfJnuCwW7-4veHy/",
+  },
 ];
