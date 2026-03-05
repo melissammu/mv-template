@@ -26,7 +26,7 @@ const abrirLink = (url) => {
     >
       {/* LOGO ARRIBA CENTRADO */}
       <div className="logo-container">
-        <img src="/logo.png" alt="MV Logo" className="logo-img" />
+        <img src="/logonvo.png" alt="MV Logo" className="logo-img" />
       </div>
 
       {/* BOTÓN TIKTOK */}
@@ -34,7 +34,7 @@ const abrirLink = (url) => {
        onClick={() => abrirLink("https://vt.tiktok.com/ZS9evc46RRqcM-2SCrz/")}
         style={{
           backgroundColor: "#ecce09",
-          color: "#fff",
+          color: "#000000",
           padding: "20px 120px",
           borderRadius: "90px",
           textDecoration: "none",
@@ -42,8 +42,10 @@ const abrirLink = (url) => {
            fontSize:"60px",
         }}
       >
-        👉 Clique agora - Vitrine TikTok Shop
+        <span className="btn-text">Clique agora - Vitrine TikTok Shop</span>
+
       </button>
+      
 
       {/* BOTÓN AMAZON */}
       <button
@@ -59,7 +61,8 @@ const abrirLink = (url) => {
 
         }}
       >
-        👉 Clique agora - Amazon
+              <span className="btn-text">Clique agora - Amazon</span>
+
       </button>
  <button
        onClick={() => abrirLink("https://onelink.shein.com/31/5ickfrxc1897")}
@@ -74,7 +77,8 @@ const abrirLink = (url) => {
 
         }}
       >
-        👉 vestido longo shein  
+               <span className="btn-text">Clique agora - Shein</span>
+ 
       </button>
 
       {/* MARCA DE AGUA ABAJO */}
