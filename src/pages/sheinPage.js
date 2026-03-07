@@ -28,9 +28,7 @@ export default function SheinPage() {
 
   return (
     <div>
-      <div style={{ padding: "10px", fontSize: "18px" }}>
-        Produtos carregados: {products.length}
-      </div>
+     
 
       {errorMessage && (
         <div style={{ padding: "10px", color: "red" }}>
