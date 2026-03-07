@@ -41,11 +41,21 @@ export default function ProductCatalog({ products = [] }) {
 
               <img
                 src={buildProxyImage(product.image)}
-                alt={product.name || product.title || "Produto"}
+                alt={product.name}
                 className="product-image"
                 loading="lazy"
                 onError={(e) => {
-                  e.currentTarget.src = "/produtos/placeholder.jpg";
+                  const img = product.image || "";
+
+                  if (
+                    img.includes("amazon") ||
+                    img.includes("m.media-amazon") ||
+                    img.includes("amazonaws")
+                  ) {
+                    e.currentTarget.src = "/produtos/placeholder-amazon.jpg";
+                  } else {
+                    e.currentTarget.src = "/produtos/placeholder.jpg";
+                  }
                 }}
               />
 
@@ -53,9 +63,7 @@ export default function ProductCatalog({ products = [] }) {
             </div>
 
             <div className="product-info">
-              <h3 className="product-name">
-                {product.name || product.title || "Produto"}
-              </h3>
+              <h3 className="product-name">{product.name}</h3>
               <p className="product-price">{product.price}</p>
             </div>
           </a>
