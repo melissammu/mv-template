@@ -1,3 +1,4 @@
+import OpenBrowserPage from "./pages/OpenBrowserPage";
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import SitePage from "./pages/sitePages";
@@ -7,9 +8,11 @@ import SheinPage from "./pages/sheinPage";
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<SitePage />} />
+      <Route path="/" element={<OpenBrowserPage />} />
+       <Route path="/home" element={<SitePage />} />
       <Route path="/amazon" element={<AmazonPage />} />
       <Route path="/shein" element={<SheinPage />} />
+      
     </Routes>
   );
 }
