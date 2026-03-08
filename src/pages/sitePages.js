@@ -10,19 +10,20 @@ export default function SitePage() {
       <div className="home-card">
         <img
           src="/avatar/shop_word.png"
-          alt="Shopping World"
+          alt="Shopping World MTI"
           className="home-logo"
           onError={(e) => {
             e.currentTarget.style.display = "none";
           }}
         />
 
-        <h1 className="home-title">Shopping World</h1>
+        <h1 className="home-title">Shopping World MTI</h1>
 
         <p className="home-subtitle">
-          Seu shopping mundial em um só lugar
+          Seu shopping mundial num só lugar.
+          
         </p>
-
+        
         <div className="home-buttons">
           <Link to="/shein" className="home-button shein-btn">
             Shein
