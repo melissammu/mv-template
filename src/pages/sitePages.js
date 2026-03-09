@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./sitePages.css";
 
 export default function SitePage() {
-  const tiktokShopLink = "https://vt.tiktok.com/ZS9dyaRedqTsc-OlTc0/";
+  const tiktokShopLink = "https://vt.tiktok.com/ZS9d9bUjTKgu9-eFlCm/";
 
   return (
     <div className="home-page">
