@@ -14,18 +14,20 @@ export default function ProductCatalog({ products = [] }) {
       <div className="catalog-grid">
         {products.map((product) => {
           const safeLink =
-            product.link &&
-            product.link.trim() !== "" &&
-            product.link !== "#"
-              ? product.link.trim()
-              : "";
+            (product.link_br &&
+            product.link_br.trim())||
+            (product.link_us &&
+            product.link_us.trim())||
+            (product.link &&
+            product.link.trim())||
+            "";
 
-          const safeImage =
-            product.image_url ||
-            ( Array.isArray(product.image)
-              ? product.image[0]
-              : product.image) || 
-            "/produtos/placeholder-amazon.jpg";
+           const safeImage =
+           (product.image_url && 
+            product.image_url.trim()) ||
+           (Array.isArray(product.image) ?
+           product.image[0] : product.image) ||
+            "/produtos/placeholder-shein.jpg";
 
           return (
             <div key={product.id} className="product-card">
