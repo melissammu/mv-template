@@ -1,16 +1,16 @@
-.amazon-page .catalog-page {
+.catalog-page {
   min-height: 100vh;
   padding: 24px 16px 40px;
   background: #f7f7f8;
 }
 
-.amazon-page .catalog-header {
+.catalog-header {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 24px;
 }
 
-.amazon-page .catalog-title {
+.catalog-title {
   font-size: 32px;
   font-weight: 800;
   margin: 0 0 8px;
@@ -18,13 +18,13 @@
   letter-spacing: -0.5px;
 }
 
-.amazon-page .catalog-subtitle {
+.catalog-subtitle {
   font-size: 15px;
   color: #666666;
   margin: 0;
 }
 
-.amazon-page .catalog-grid {
+.catalog-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 18px;
@@ -32,12 +32,12 @@
   margin: 0 auto;
 }
 
-.amazon-page .product-card {
+.product-card {
   width: 100%;
   text-decoration: none;
 }
 
-.amazon-page .image-container {
+.image-container {
   position: relative;
   width: 100%;
   border-radius: 18px;
@@ -45,24 +45,24 @@
   background: #ffffff;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   transition: transform 0.22s ease, box-shadow 0.22s ease;
+  display: block;
 }
 
-.amazon-page .image-container:hover {
+.image-container:hover {
   transform: translateY(-4px);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
 }
 
-.amazon-page .product-image {
+.product-image {
   width: 100%;
-  max-height: 220px;
-  height: auto;
+  height: 220px;
   object-fit: contain;
   display: block;
   background: #ffffff;
   padding: 10px;
 }
 
-.amazon-page .click-shortcut {
+.click-shortcut {
   position: absolute;
   bottom: 10px;
   right: 10px;
@@ -77,11 +77,11 @@
   backdrop-filter: blur(4px);
 }
 
-.amazon-page .product-info {
+.product-info {
   padding: 12px 4px 4px;
 }
 
-.amazon-page .product-name {
+.product-name {
   font-size: 16px;
   font-weight: 700;
   color: #181818;
@@ -90,23 +90,23 @@
   min-height: 42px;
 }
 
-.amazon-page .product-price {
+.product-price {
   font-size: 18px;
   font-weight: 800;
   color: #111111;
   margin: 0 0 12px;
 }
 
-.amazon-page .product-title-link {
+.product-title-link {
   text-decoration: none;
   color: inherit;
 }
 
-.amazon-page .product-title-link:hover .product-name {
+.product-title-link:hover .product-name {
   color: #7a3cff;
 }
 
-.amazon-page .product-button {
+.product-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -124,89 +124,89 @@
   cursor: pointer;
 }
 
-.amazon-page .product-button:hover {
+.product-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 12px 22px rgba(255, 122, 24, 0.35);
   opacity: 0.96;
 }
 
-.amazon-page .product-button:disabled {
+.product-button:disabled {
   background: #bdbdbd;
   box-shadow: none;
   cursor: not-allowed;
 }
 
 @media (min-width: 768px) {
-  .amazon-page .catalog-page {
+  .catalog-page {
     padding: 28px 22px 48px;
   }
 
-  .amazon-page .catalog-title {
+  .catalog-title {
     font-size: 36px;
   }
 
-  .amazon-page .catalog-subtitle {
+  .catalog-subtitle {
     font-size: 16px;
   }
 
-  .amazon-page .catalog-grid {
+  .catalog-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 22px;
   }
 
-  .amazon-page .product-image {
+  .product-image {
     height: 240px;
   }
 }
 
 @media (min-width: 1024px) {
-  .amazon-page .catalog-grid {
+  .catalog-grid {
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
   }
 
-  .amazon-page .product-image {
+  .product-image {
     height: 250px;
   }
 
-  .amazon-page .product-name {
+  .product-name {
     font-size: 17px;
   }
 }
 
 @media (max-width: 480px) {
-  .amazon-page .catalog-page {
+  .catalog-page {
     padding: 18px 12px 30px;
   }
 
-  .amazon-page .catalog-title {
+  .catalog-title {
     font-size: 24px;
   }
 
-  .amazon-page .catalog-subtitle {
+  .catalog-subtitle {
     font-size: 14px;
   }
 
-  .amazon-page .catalog-grid {
+  .catalog-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 14px;
   }
 
-  .amazon-page .product-image {
-    height: 160px;
+  .product-image {
+    height: 180px;
     padding: 8px;
   }
 
-  .amazon-page .product-name {
+  .product-name {
     font-size: 14px;
     min-height: 38px;
   }
 
-  .amazon-page .product-price {
+  .product-price {
     font-size: 16px;
   }
 
-  .amazon-page .product-button {
+  .product-button {
     width: 100%;
     padding: 9px 10px;
     font-size: 13px;
