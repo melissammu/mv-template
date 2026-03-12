@@ -171,9 +171,9 @@
 
 @media (max-width: 480px) {
   .global-search {
-    padding: 0 22px;
+    padding:22px;
     margin-top: 22px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 
   .global-search-input {
