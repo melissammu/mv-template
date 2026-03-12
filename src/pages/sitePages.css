@@ -138,6 +138,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 24px;
   margin-bottom: 34px;
   padding: 0 20px;
@@ -146,7 +147,7 @@
 
 .global-search-input {
   width: 100%;
-  max-width: 100%;
+  max-width: 420px;
   height: 52px;
   padding: 0 18px;
   border: 1.8px solid #dcdcdc;
@@ -169,6 +170,8 @@
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
+/* RESPONSIVE PARA CELULAR */
+
 @media (max-width: 480px) {
 
   .global-search {
@@ -185,5 +188,5 @@
     font-size: 15px;
     padding: 0 16px;
   }
-}
-}
+
+}}
