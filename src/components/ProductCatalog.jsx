@@ -1,7 +1,13 @@
 import React from "react";
 import "./ProductCatalog.css";
-
+import { useState } from "react";
 export default function ProductCatalog({ products = [] }) {
+
+const [search, setSearch] = useState("");
+
+const filteredProducts = products.filter((product) =>
+  product.name?.toLowerCase().includes(search.toLowerCase())
+);
   return (
     <div className="catalog-page">
       <div className="catalog-header">
@@ -9,10 +15,19 @@ export default function ProductCatalog({ products = [] }) {
         <p className="catalog-subtitle">
           Escolha seu produto e clique para comprar
         </p>
+  <div className="search-box">
+  <input
+    type="text"
+    className="search-input"
+    placeholder="🔍 Buscar produto..."
+    value={search}
+    onChange={(e) => setSearch(e.target.value)}
+  />
+</div>
       </div>
 
       <div className="catalog-grid">
-        {products.map((product) => {
+        {filteredProducts.map((product) => {
           const safeLink =
             (product.link_br &&
             product.link_br.trim())||
@@ -20,6 +35,7 @@ export default function ProductCatalog({ products = [] }) {
             product.link_us.trim())||
             (product.link &&
             product.link.trim())||
+
             "";
 
            const safeImage =
