@@ -11,7 +11,6 @@ export default function AmazonUsaPage() {
      const { data, error } = await supabase
              .from("amazon_usa_products")
              .select("*")
-             .eq("is_active", true)
              .order("id", { ascending: false });
       if (error) {
         console.error("Erro ao buscar produtos amazonUsa:", error);
