@@ -9,9 +9,9 @@ export default function AmazonUsaPage() {
   useEffect(() => {
     async function loadProducts() {
       const { data, error } = await supabase
-        .from("products")
+        .from("amazon_usa_products")
         .select("*")
-        .eq("store", "amazonUsa")
+        .eq("store", "amazon USA")
         .order("id", { ascending: false });
 
       if (error) {
