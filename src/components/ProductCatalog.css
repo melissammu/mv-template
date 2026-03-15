@@ -1,17 +1,4 @@
-/* ===== FIX MOBILE LAYOUT ===== */
-
-.catalog-page{
-  width:100%;
-  max-width:100%;
-  overflow-x:hidden;
-}
-
-.catalog-grid{
-  width:100%;
-  max-width:100%;
-}
-
-/* MOBILE */
+ /* MOBILE */
 
 @media (max-width:768px){
 
