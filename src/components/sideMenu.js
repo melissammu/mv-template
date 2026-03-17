@@ -30,7 +30,7 @@ export default function SideMenu({ isOpen, onClose }) {
             onClose();
           }}
         >
-          🤝 Quero ser aliada
+          🤝 Quero ser afiliada
         </button>
       </div>
 
