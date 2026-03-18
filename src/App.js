@@ -7,6 +7,7 @@ import AmazonUsaPage from "./pages/amazonUsaPage";
 import SheinPage from "./pages/sheinPage";
 import SearchPage from "./pages/searchPage";
 import RegistroAliadaPage from "./pages/RegistroAliadaPage";
+import AdminAfiliadasPage from "./pages/AdminAfiliadasPage";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
       <Route path="/shein" element={<SheinPage />} />
       <Route path="/home" element={<SitePage />} />
       <Route path="/registro-aliada" element={<RegistroAliadaPage />} />
+      <Route path="/admin-afiliadas" element={<AdminAfiliadasPage />} />
     </Routes>
   );
 }
